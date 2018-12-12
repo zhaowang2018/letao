@@ -1,12 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- 1.css在head中引入
+    2.js在body结束标签上面引入
+    3.先引入第三方包
+    4. 再引入自己的包
+    5.如果有依赖关系,先引入被依赖的包,在引入不被依赖的包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/index.less">
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem.js适配包 -->
+    <script src="./js/rem.js"></script>
 </head>
+
 <body>
-    <div>自己写的代码</div>
+
+    <!-- 头部区域 -->
+    <header id="header">
+        <h4>我的乐淘主页</h4>
+        <a href="search.html" class="fa fa-search"></a>
+    </header>
+
+    <!-- 内容区域 -->
+    <main id="main">
+        <!-- 添加一个区域滚动的父容器 -->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 轮播图区域 -->
+                <section class="slide">
+                    <div class="mui-slider">
+                        <div class="mui-slider-group mui-slider-loop">
+                            <!--支持循环，需要重复图片节点-->
+                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner6.png" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner1.png" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner2.png" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner3.png" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner4.png" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner5.png" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="./images/banner6.png" /></a></div>
+                            <!--支持循环，需要重复图片节点-->
+                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner1.png" /></a></div>
+                        </div>
+                        <div class="mui-slider-indicator mui-text-right">
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator mui-active"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 导航条区域 -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#"><img src="images/nav1.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/nav2.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/nav3.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/nav4.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/nav5.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/nav6.png" alt=""></a></li>
+                    </ul>
+                </nav>
+                <!-- 广告区域 -->
+                <section id="banner">
+                    <div class="banner-left">
+                        <a href="#">
+                            <img src="images/active1.png" alt="">
+                            <img src="images/active2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="images/active4.png" alt="">
+                            <img src="images/active5.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="banner-right">
+                        <a href="#">
+                            <img src="images/active3.png" alt="">
+                        </a>
+                    </div>
+                </section>
+
+                <!-- 品牌专区 -->
+                <section id="brand">
+                    <div class="title">
+                        <a href="#">
+                            <img src="images/title0.png" alt="">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#"><img src="images/brand1.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/brand2.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/brand3.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/brand4.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/brand5.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/brand6.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/brand7.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/brand8.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 运动生活专区 -->
+                <section id="sport">
+                    <div class="title">
+                        <a href="#">
+                            <img src="images/title1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="#" class="product">
+                                    <img class="product-img" src="images/product.jpg" alt="">
+                                    <p class="product-name">adides阿迪达斯</p>
+                                    <p class="product-price">
+                                        <span>$99.99</span>
+                                        <del>$199.99</del>
+                                    </p>
+                                    <p class="product-buy">
+                                        <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="product">
+                                    <img class="product-img" src="images/product.jpg" alt="">
+                                    <p class="product-name">adides阿迪达斯</p>
+                                    <p class="product-price">
+                                        <span>$99.99</span>
+                                        <del>$199.99</del>
+                                    </p>
+                                    <p class="product-buy">
+                                        <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="product">
+                                    <img class="product-img" src="images/product.jpg" alt="">
+                                    <p class="product-name">adides阿迪达斯</p>
+                                    <p class="product-price">
+                                        <span>$99.99</span>
+                                        <del>$199.99</del>
+                                    </p>
+                                    <p class="product-buy">
+                                        <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="product">
+                                    <img class="product-img" src="images/product.jpg" alt="">
+                                    <p class="product-name">adides阿迪达斯</p>
+                                    <p class="product-price">
+                                        <span>$99.99</span>
+                                        <del>$199.99</del>
+                                    </p>
+                                    <p class="product-buy">
+                                        <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="product">
+                                    <img class="product-img" src="images/product.jpg" alt="">
+                                    <p class="product-name">adides阿迪达斯</p>
+                                    <p class="product-price">
+                                        <span>$99.99</span>
+                                        <del>$199.99</del>
+                                    </p>
+                                    <p class="product-buy">
+                                        <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="product">
+                                    <img class="product-img" src="images/product.jpg" alt="">
+                                    <p class="product-name">adides阿迪达斯</p>
+                                    <p class="product-price">
+                                        <span>$99.99</span>
+                                        <del>$199.99</del>
+                                    </p>
+                                    <p class="product-buy">
+                                        <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 女士专区 -->
+                <section id="woman">
+
+                </section>
+
+                <!-- 男士专区 -->
+                <section id="man"></section>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <ul>
+            <li>
+                <a href="index.html" class="fa fa-home">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="fa fa-bars">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="fa fa-shopping-cart">
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="fa fa-user">
+                    <span>个人中心</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- 引入zepto的js  发送请求和获取元素之类的 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入MUI的js -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入模板引擎 artTemplate  -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 首页自己的js包 -->
+    <script src="js/index.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+body {
+  padding: 0.45rem 0;
+  height: 100vh;
+}
+#main {
+  position: relative;
+  height: 100%;
+}
+#header {
+  background-color: #006699;
+  display: flex;
+  height: 0.45rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 0 0.45rem 0 0.45rem;
+}
+#header h4 {
+  margin: 0;
+  width: 2.85rem;
+  line-height: 0.45rem;
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+}
+#header a {
+  width: .45rem;
+  height: 0.45rem;
+  right: 0;
+  top: 0;
+  line-height: 0.45rem;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+}
+#footer {
+  height: 0.45rem;
+  width: 100vw;
+  background-color: #006699;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  width: 25vw;
+}
+#footer ul li a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: .085rem 0;
+}
+#footer ul li a span {
+  display: block;
+}
+/*主页导航条的样式*/
+#nav {
+  padding: .1rem;
+}
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav ul li {
+  width: 33.33%;
+}
+#nav ul li a {
+  display: block;
+}
+#nav ul li a img {
+  width: 100%;
+  height: 100%;
+}
+#banner {
+  display: flex;
+  padding: .1rem;
+}
+#banner .banner-left {
+  background-color: #0f0;
+  width: 2.3667rem;
+  height: 2.4rem;
+}
+#banner .banner-left a {
+  display: block;
+  font-size: 0;
+}
+#banner .banner-left a img {
+  width: 50%;
+}
+#banner .banner-right {
+  background-color: #f40;
+  width: 1.1833rem;
+  height: 2.4rem;
+}
+#banner .banner-right a {
+  display: block;
+}
+#banner .banner-right a img {
+  width: 100%;
+}
+#brand {
+  padding: .1rem;
+}
+#brand .title a {
+  display: block;
+}
+#brand .title a img {
+  width: 100%;
+}
+#brand .content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#brand .content ul li {
+  width: 25%;
+}
+#brand .content ul li a {
+  display: block;
+}
+#brand .content ul li a img {
+  width: 100%;
+}
+#sport {
+  padding: .1rem;
+}
+#sport .title a {
+  display: block;
+}
+#sport .title a img {
+  width: 100%;
+}
+#sport .content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#sport .content ul li {
+  width: 50%;
+}
+#sport .content ul li .product {
+  display: block;
+  background-color: #fff;
+  padding-bottom: .1rem;
+  box-shadow: 0px 0px .1rem #ccc;
+  text-align: center;
+  overflow: hidden;
+}
+#sport .content ul li .product .product-img {
+  width: 100%;
+}
+#sport .content ul li .product .product-price span {
+  color: #f40;
+}
+#sport .content ul li .product .product-price del {
+  color: #ccc;
+}
+#sport .content ul li .product .product-buy button {
+  margin-bottom: 0.07rem;
+}

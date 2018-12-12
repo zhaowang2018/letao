@@ -1,0 +1,78 @@
+// 定义公共变量
+@main-color:#006699;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+img {
+    vertical-align: middle;
+}
+body {
+    padding: 0.45rem 0;
+    height: 100vh;
+}
+#main {
+    position: relative;
+    height: 100%;
+}
+#header {
+    background-color: @main-color;
+    display: flex;
+    height: 0.45rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    // 给父元素padding把内容挤到中间
+    padding: 0 0.45rem 0 0.45rem;
+    h4 {
+        margin: 0;
+        width: 2.85rem;
+        line-height: 0.45rem;
+        text-align: center;
+        color: #fff;
+        font-weight: normal;
+
+    }
+    a {
+        width: .45rem;
+        height: 0.45rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 0.45rem;
+        text-align: center;
+        color: #fff;
+        position: absolute;
+    }
+}
+
+#footer {
+    height: 0.45rem;
+    width: 100vw;
+    background-color: @main-color;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    ul {
+        display: flex;
+        li {
+            width: 25vw;
+            a {
+                color: #fff;
+                display: block;
+                text-align: center;
+                padding: .085rem 0;
+                span {
+                    display: block;
+                    
+                }
+            }
+        }
+    }
+}
