@@ -83,51 +83,12 @@ body {
 #footer ul li a span {
   display: block;
 }
-.form-search {
-  display: flex;
-  padding: .1rem;
-  padding-bottom: 0;
-}
-.form-search .input-search {
-  flex: 1;
-  height: .34rem;
-  background-color: #fff;
-  border: 1px solid #006699;
-  text-align: left;
-  font-size: .14rem;
-  border-radius: 0.06rem 0 0 0.06rem;
-}
-.form-search .btn-search {
-  width: 0.6rem;
-  height: 0.34rem;
-  background-color: #006699;
-  border-color: #006699;
-  border-radius: 0 0.06rem 0.06rem 0;
-}
-.product-list .content {
-  flex: 1;
-  position: relative;
-}
-.product-list .content ul {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 5.78rem;
-  align-content: flex-start;
-  padding: .1rem;
-}
-.product-list .content ul li {
-  width: 50%;
-}
-.product-list .content ul li a {
-  display: block;
+#main {
   background-color: #fff;
 }
-.product-list .content ul li a img {
-  width: 100%;
-}
-.product-list .content ul li a p {
+#main .search-history .mui-card-header span {
   font-size: .14rem;
-  text-align: center;
-  overflow: hidden;
-  height: 0.45rem;
+}
+#main .search-history .mui-card-header a {
+  color: #666;
 }

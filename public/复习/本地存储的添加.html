@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="search">
+    <button type="button" class="add">添加</button>
+    <script src="../m/lib/zepto/zepto.min.js"></script>
+    <script>
+        
+        var add = $('.add');
+    
+        add.on('click',function () { 
+            //拿到输入框的值
+            var search = $('.search').val();
+            //1.同一个history会覆盖掉前面存储的值,
+            //2.需要声明一个数组来存放
+            
+            var arr = JSON.parse(localStorage.getItem('history')) || [];
+            //3.然后把记录添加进数组,需要转成字符串;
+            arr.push(search);
+
+            //添加进本地存储
+            localStorage.setItem('history',JSON.stringify(arr));
+         })
+    
+    
+    </script>
+</body>
+</html>

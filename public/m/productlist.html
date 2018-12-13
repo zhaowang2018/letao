@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.css在head中引入
+    2.js在body结束标签上面引入
+    3.先引入第三方包
+    4. 再引入自己的包
+    5.如果有依赖关系,先引入被依赖的包,在引入不被依赖的包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/productlist.less">
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem.js适配包 -->
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript:history.back();" class="fa fa-arrow-left"></a>
+        <h4>搜索中心</h4>
+    </header>
+
+    <!-- 内容区域 -->
+    <main id="main">
+        <form action="#" class="form-search">
+            <input type="search" class="input-search" placeholder="请输入要搜索的内容">
+            <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+        </form>
+
+        <!-- 商品列表 -->
+        <div class="product-list">
+            <div class="title">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            上架时间
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#">
+                            价格
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            销量
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            折扣
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="#" class="product">
+                            <img class="product-img" src="images/product.jpg" alt="">
+                            <p class="product-name">adides阿迪达斯</p>
+                            <p class="product-price">
+                                <span>$99.99</span>
+                                <del>$199.99</del>
+                            </p>
+                            <p class="product-buy">
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="product">
+                            <img class="product-img" src="images/product.jpg" alt="">
+                            <p class="product-name">adides阿迪达斯</p>
+                            <p class="product-price">
+                                <span>$99.99</span>
+                                <del>$199.99</del>
+                            </p>
+                            <p class="product-buy">
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <ul>
+            <li>
+                <a href="index.html" class="fa fa-home">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="fa fa-bars">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html" class="fa fa-shopping-cart">
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="user.html" class="fa fa-user">
+                    <span>个人中心</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script type="text/html" id="tpl3">
+        {{each data value }}
+        <li>
+             <a href="#" class="product">
+                 <img class="product-img" src="{{value.pic[0].picAddr}}" alt="">
+                 <p class="product-name">{{value.proName}}</p>
+                 <p class="product-price">
+                     <span>${{value.price}}</span>
+                     <del>${{value.oldPrice}}</del>
+                 </p>
+                 <p class="product-buy">
+                     <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                 </p>
+             </a>
+         </li>
+         {{/each}}
+
+    </script>
+
+    <!-- 引入zepto的js  发送请求和获取元素之类的 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入MUI的js -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入模板引擎 artTemplate  -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 首页自己的js包 -->
+    <script src="js/productlist.js"></script>
+
+</body>
+
+</html>

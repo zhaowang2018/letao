@@ -29,6 +29,7 @@ body {
     z-index: 999;
     // 给父元素padding把内容挤到中间
     padding: 0 0.45rem 0 0.45rem;
+    width: 100%;
     h4 {
         margin: 0;
         width: 2.85rem;
@@ -36,18 +37,33 @@ body {
         text-align: center;
         color: #fff;
         font-weight: normal;
-
+    }
+    form {
+        width: 100%;
+        padding-top: 0.05rem;
+        input {
+            text-align: left;
+            background-color: #fff;
+            margin-bottom: 0;
+            
+        }
     }
     a {
         width: .45rem;
         height: 0.45rem;
         position: absolute;
-        right: 0;
+        
         top: 0;
         line-height: 0.45rem;
         text-align: center;
         color: #fff;
         position: absolute;
+        &:last-of-type {
+            right: 0;
+        }
+        &:first-of-type {
+            left: 0;
+        }
     }
 }
 
@@ -71,6 +87,60 @@ body {
                 span {
                     display: block;
                     
+                }
+            }
+        }
+    }
+}
+//搜索表单的公共样式
+.form-search {
+    display: flex;
+    padding: .1rem;
+    padding-bottom: 0;
+    .input-search {
+        flex: 1;
+        height: .34rem;
+        background-color: #fff;
+        border: 1px solid @main-color;
+        text-align: left;
+        font-size: .14rem;
+        border-radius:  0.06rem 0 0 0.06rem;
+    }
+    .btn-search {
+        width: 0.6rem;
+        height: 0.34rem;
+        background-color: @main-color;
+        border-color: @main-color;
+        border-radius: 0 0.06rem 0.06rem 0;
+    }
+}
+
+//商品类别的公共样式
+
+.product-list {
+    .content {
+        flex: 1;
+       position: relative;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 5.78rem;
+            align-content: flex-start;
+            padding: .1rem;
+            li {
+                width: 50%;
+                a {
+                    display: block;
+                    background-color: #fff;
+                    img {
+                        width: 100%;
+                    }
+                    p {
+                        font-size: .14rem;
+                        text-align: center;
+                        overflow: hidden;
+                        height: 0.45rem;
+                    }
                 }
             }
         }
